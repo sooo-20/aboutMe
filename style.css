@@ -1,0 +1,203 @@
+:root {
+  /*color*/
+  --lavenderblush: #fff0f5;
+  --dimgray: #696969;
+  --lavender: #e6e6fa;
+
+  /*font size*/
+  --fontsize-large: 24px;
+  --fontsize-medium: 18px;
+  --fontsize-small: 14px;
+  --fontsize-mini: 12px;
+}
+
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--lavenderblush);
+  font-family: "Nanum Gothic", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  font-weight: bold;
+}
+a:hover,
+a:active {
+  color: black;
+}
+
+.title {
+  text-align: center;
+  font-size: var(--fontsize-large);
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+header {
+  position: sticky;
+  top: 0;
+}
+
+.navbar {
+  background-color: white;
+  color: mediumpurple;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar .page_title {
+  font-size: var(--fontsize-large);
+  font-weight: bold;
+  margin-left: 12px;
+}
+
+.navbar .navbar_menu {
+  display: flex;
+}
+
+.navbar .navbar_menu li {
+  list-style-type: none;
+  padding: 20px 12px;
+}
+
+.navbar .navbar_menu li:hover,
+.navbar .navbar_menu li:active {
+  background-color: var(--lavenderblush);
+}
+
+.navbar .navbar_toggleBtn {
+  display: none;
+  position: absolute;
+  right: 32px;
+  top: 16px;
+  font-size: 18px;
+}
+
+.aboutMe {
+  text-align: center;
+  padding-top: 40px;
+}
+
+.aboutMe img {
+  display: block;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.aboutMe .info {
+  padding: 20px;
+  line-height: 1.6;
+}
+
+.aboutMe .info .name {
+  font-size: var(--fontsize-large);
+  font-weight: bold;
+}
+
+.aboutMe .info .summary {
+  font-size: var(--fontsize-small);
+  color: var(--dimgray);
+}
+
+.aboutMe .more {
+  font-size: var(--fontsize-mini);
+  padding: 10px;
+}
+
+.aboutMe .more button {
+  padding: 10px;
+  margin: 4px;
+  background-color: transparent;
+  cursor: pointer;
+  border: 1px dashed var(--dimgray);
+  font-size: var(--fontsize-mini);
+}
+
+#skills {
+  padding-top: 100px;
+}
+
+#skills li {
+  list-style-type: none;
+  line-height: 1.8;
+  font-size: var(--fontsize-small);
+}
+
+#skills img {
+  width: 30px;
+  vertical-align: middle;
+}
+
+#skills .languages {
+  margin-top: 0px;
+  display: flex;
+  justify-content: space-between;
+  width: 600px;
+  margin: auto;
+  color: var(--dimgray);
+}
+
+#skills progress {
+  height: 30px;
+  width: 250px;
+}
+
+#experiences {
+  padding-top: 100px;
+}
+
+#contacts {
+  padding-top: 100px;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar .page_title {
+    margin: 12px;
+  }
+
+  .navbar .navbar_menu {
+    display: none;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .navbar_menu li {
+    width: 100%;
+  }
+
+  .navbar .navbar_toggleBtn {
+    display: block;
+  }
+
+  .navbar_menu.active {
+    display: flex;
+  }
+
+  #skills .languages {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  #skills .humanLang {
+    margin-top: 24px;
+  }
+}
