@@ -22,15 +22,6 @@ body {
   font-family: "Nanum Gothic", sans-serif;
 }
 
-a {
-  text-decoration: none;
-  font-weight: bold;
-}
-a:hover,
-a:active {
-  color: black;
-}
-
 .title {
   text-align: center;
   font-size: var(--fontsize-large);
@@ -42,6 +33,15 @@ a:active {
 header {
   position: sticky;
   top: 0;
+}
+
+#main a {
+  text-decoration: none;
+  font-weight: bold;
+}
+#main a:hover,
+#main a:active {
+  color: black;
 }
 
 .navbar {
@@ -86,23 +86,74 @@ header {
   padding-top: 40px;
 }
 
+.mySlides {
+  display: none;
+}
+
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
 .aboutMe img {
   display: block;
-  width: 200px;
-  height: 200px;
+  width: 250px;
+  height: 250px;
   border-radius: 50%;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 20px;
+}
+
+.dot {
+  height: 8px;
+  width: 8px;
+  margin: 4px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: var(--dimgray);
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .aboutMe .info {
-  padding: 20px;
+  padding: 16px;
   line-height: 1.6;
 }
 
 .aboutMe .info .name {
   font-size: var(--fontsize-large);
   font-weight: bold;
+  margin-bottom: 8px;
 }
 
 .aboutMe .info .summary {
@@ -126,6 +177,7 @@ header {
 
 #skills {
   padding-top: 100px;
+  padding-bottom: 200px;
 }
 
 #skills li {
@@ -143,7 +195,7 @@ header {
   margin-top: 0px;
   display: flex;
   justify-content: space-between;
-  width: 600px;
+  width: 700px;
   margin: auto;
   color: var(--dimgray);
 }
@@ -153,12 +205,57 @@ header {
   width: 250px;
 }
 
-#experiences {
-  padding-top: 100px;
+#progressBar {
+  width: 300px;
+  height: 20px;
+  border: 2px solid mediumpurple;
+  background-color: #fff;
+  margin-bottom: 8px;
 }
 
-#contacts {
+#progressBarFull10 {
+  height: 18px;
+  background-color: mediumpurple;
+  width: 100%;
+}
+
+#progressBarFull8 {
+  height: 18px;
+  background-color: mediumpurple;
+  width: 80%;
+}
+
+#progressBarFull7 {
+  height: 18px;
+  background-color: mediumpurple;
+  width: 70%;
+}
+
+#progressBarFull5 {
+  height: 18px;
+  background-color: mediumpurple;
+  width: 50%;
+}
+
+#progressBarFull4 {
+  height: 18px;
+  background-color: mediumpurple;
+  width: 40%;
+}
+
+#contact {
   padding-top: 100px;
+  padding-bottom: 200px;
+}
+
+#contact li {
+  text-align: center;
+  font-size: var(--fontsize-small);
+  line-height: 2;
+}
+
+#contact a {
+  text-decoration: none;
 }
 
 @media screen and (max-width: 768px) {

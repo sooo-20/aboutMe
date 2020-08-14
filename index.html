@@ -23,7 +23,6 @@
         <ul class="navbar_menu">
           <li><a href="#main">About me</a></li>
           <li><a href="#skills">Skills</a></li>
-          <li><a href="#experiences">Experiences</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
         <a href="#" class="navbar_toggleBtn"><i class="fas fa-bars"></i></a>
@@ -31,10 +30,34 @@
     </header>
     <!--프로필&자기소개-->
     <section class="aboutMe">
-      <img
-        src="C:\Users\sojeo\Documents\Projects\Prestudy_week1_HTML,CSS\images\profile.jpg"
-        alt="프로필사진"
-      />
+      <div class="slideshow-container">
+        <div class="mySlides fade">
+          <img
+            src="C:\Users\sojeo\Documents\Projects\Prestudy_week1_HTML,CSS\images\profile1.jpg"
+          />
+        </div>
+        <div class="mySlides fade">
+          <img
+            src="C:\Users\sojeo\Documents\Projects\Prestudy_week1_HTML,CSS\images\profile2.jpg"
+          />
+        </div>
+        <div class="mySlides fade">
+          <img
+            src="C:\Users\sojeo\Documents\Projects\Prestudy_week1_HTML,CSS\images\profile3.jpg"
+          />
+        </div>
+        <div class="mySlides fade">
+          <img
+            src="C:\Users\sojeo\Documents\Projects\Prestudy_week1_HTML,CSS\images\profile4.jpg"
+          />
+        </div>
+      </div>
+      <div style="text-align: center;">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
       <div class="info">
         <div class="name">허소정</div>
         <div class="summary">
@@ -45,15 +68,6 @@
             "고양이와 여행을 사랑하는, 디지털 노마드를 꿈꾸는 초보 개발자"
           </p>
           <br />
-          <p>저에 대해 더 알고싶다면:</p>
-        </div>
-        <div class="more">
-          <button class="cat">
-            <i class="fas fa-camera">&nbsp고양이사진</i>
-          </button>
-          <button class="pictures">
-            <i class="fas fa-camera">&nbsp여행사진</i>
-          </button>
         </div>
       </div>
     </section>
@@ -69,38 +83,48 @@
               <img
                 src="https://img.icons8.com/color/48/000000/html-5.png"
               />HTML
-              <div>
-                <progress value="80" max="100"></progress>
+              <div class="container">
+                <div id="progressBar">
+                  <div id="progressBarFull8"></div>
+                </div>
               </div>
             </li>
             <li>
               <img src="https://img.icons8.com/color/48/000000/css3.png" />CSS
-              <div>
-                <progress value="70" max="100"></progress>
+              <div class="container">
+                <div id="progressBar">
+                  <div id="progressBarFull7"></div>
+                </div>
               </div>
             </li>
             <li>
               <img
                 src="https://img.icons8.com/color/48/000000/python.png"
               />Python
-              <div>
-                <progress value="50" max="100"></progress>
+              <div class="container">
+                <div id="progressBar">
+                  <div id="progressBarFull5"></div>
+                </div>
               </div>
             </li>
             <li>
               <img
                 src="https://img.icons8.com/color/48/000000/c-programming.png"
               />C
-              <div>
-                <progress value="50" max="100"></progress>
+              <div class="container">
+                <div id="progressBar">
+                  <div id="progressBarFull5"></div>
+                </div>
               </div>
             </li>
             <li>
               <img
                 src="https://img.icons8.com/color/48/000000/javascript.png"
               />Javascript
-              <div>
-                <progress value="30" max="100"></progress>
+              <div class="container">
+                <div id="progressBar">
+                  <div id="progressBarFull4"></div>
+                </div>
               </div>
             </li>
           </ul>
@@ -113,39 +137,48 @@
               <img
                 src="https://img.icons8.com/color/48/000000/south-korea-circular.png"
               />Korean
-              <div>
-                <progress value="100" max="100"></progress>
+              <div class="container">
+                <div id="progressBar">
+                  <div id="progressBarFull10"></div>
+                </div>
               </div>
             </li>
             <li>
               <img
                 src="https://img.icons8.com/color/48/000000/usa-circular.png"
               />English
-              <div>
-                <progress value="75" max="100"></progress>
+              <div class="container">
+                <div id="progressBar">
+                  <div id="progressBarFull7"></div>
+                </div>
               </div>
             </li>
             <li>
               <img
                 src="https://img.icons8.com/fluent/48/000000/china-circular.png"
               />Chinese
-              <div>
-                <progress value="75" max="100"></progress>
+              <div class="container">
+                <div id="progressBar">
+                  <div id="progressBarFull7"></div>
+                </div>
               </div>
             </li>
           </ul>
         </div>
       </div>
     </section>
-    <section id="experiences">
-      <div class="title">Experiences</div>
-    </section>
     <!--연락처-->
     <section id="contact">
       <div class="title">Contacts</div>
-      <a href="">이메일</a>
-      <a href="">깃헙</a>
-      <a href="">카카오톡</a>
+      <ul contactAddress>
+        <li>
+          <a href="https://github.com/sooo-20" target="_blank"
+            >Github: https://github.com/sooo-20</a
+          >
+        </li>
+        <li>Email : sojeong.heo@gmail.com</li>
+        <li>Kakaotalk : @sojeong93</li>
+      </ul>
     </section>
   </body>
 </html>
