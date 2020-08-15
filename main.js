@@ -20,9 +20,9 @@ function showSlides() {
     slideIndex = 1;
   }
   for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
+    dots[i].className = dots[i].className.replace(" current", "");
   }
   slides[slideIndex - 1].style.display = "block";
-  dots[slideIndex - 1].className += " active";
-  setTimeout(showSlides, 2000); // Change image every 2 seconds
+  dots[slideIndex - 1].className += " current";
+  setTimeout(showSlides, 1800); // Change image every 2 seconds
 }

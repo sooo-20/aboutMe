@@ -5,10 +5,10 @@
   --lavender: #e6e6fa;
 
   /*font size*/
-  --fontsize-large: 24px;
-  --fontsize-medium: 18px;
-  --fontsize-small: 14px;
-  --fontsize-mini: 12px;
+  --fontsize-large: 28px;
+  --fontsize-medium: 24px;
+  --fontsize-small: 20px;
+  --fontsize-mini: 16px;
 }
 
 * {
@@ -18,8 +18,8 @@
 }
 
 body {
-  background-color: var(--lavenderblush);
   font-family: "Nanum Gothic", sans-serif;
+  background-color: white;
 }
 
 .title {
@@ -38,15 +38,17 @@ header {
 #main a {
   text-decoration: none;
   font-weight: bold;
+  color: white;
+  padding: 20px 12px;
 }
+
 #main a:hover,
 #main a:active {
   color: black;
 }
 
 .navbar {
-  background-color: white;
-  color: mediumpurple;
+  background-color: mediumpurple;
   text-transform: uppercase;
   display: flex;
   justify-content: space-between;
@@ -54,6 +56,7 @@ header {
 }
 
 .navbar .page_title {
+  color: white;
   font-size: var(--fontsize-large);
   font-weight: bold;
   margin-left: 12px;
@@ -70,40 +73,38 @@ header {
 
 .navbar .navbar_menu li:hover,
 .navbar .navbar_menu li:active {
-  background-color: var(--lavenderblush);
+  color: black;
+  background-color: white;
 }
 
 .navbar .navbar_toggleBtn {
   display: none;
   position: absolute;
-  right: 32px;
-  top: 16px;
+  right: 18px;
   font-size: 18px;
 }
 
 .aboutMe {
+  padding: 40px 100px;
   text-align: center;
-  padding-top: 40px;
+  display: flex;
+  flex-direction: column;
 }
 
 .mySlides {
   display: none;
-}
-
-.slideshow-container {
-  max-width: 1000px;
-  position: relative;
-  margin: auto;
+  z-index: -1;
 }
 
 .aboutMe img {
   display: block;
-  width: 250px;
-  height: 250px;
+  width: 300px;
+  height: 300px;
   border-radius: 50%;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+  z-index: -1;
 }
 
 .dot {
@@ -116,7 +117,7 @@ header {
   transition: background-color 0.6s ease;
 }
 
-.active {
+.current {
   background-color: var(--dimgray);
 }
 
@@ -146,44 +147,18 @@ header {
 }
 
 .aboutMe .info {
-  padding: 16px;
-  line-height: 1.6;
-}
-
-.aboutMe .info .name {
-  font-size: var(--fontsize-large);
-  font-weight: bold;
-  margin-bottom: 8px;
-}
-
-.aboutMe .info .summary {
-  font-size: var(--fontsize-small);
-  color: var(--dimgray);
-}
-
-.aboutMe .more {
-  font-size: var(--fontsize-mini);
-  padding: 10px;
-}
-
-.aboutMe .more button {
-  padding: 10px;
-  margin: 4px;
-  background-color: transparent;
-  cursor: pointer;
-  border: 1px dashed var(--dimgray);
-  font-size: var(--fontsize-mini);
+  line-height: 1.8;
 }
 
 #skills {
   padding-top: 100px;
-  padding-bottom: 200px;
+  padding-bottom: 100px;
 }
 
 #skills li {
   list-style-type: none;
   line-height: 1.8;
-  font-size: var(--fontsize-small);
+  font-size: var(--fontsize-mini);
 }
 
 #skills img {
@@ -198,6 +173,7 @@ header {
   width: 700px;
   margin: auto;
   color: var(--dimgray);
+  font-size: var(--fontsize-small);
 }
 
 #skills progress {
@@ -244,18 +220,48 @@ header {
 }
 
 #contact {
-  padding-top: 100px;
-  padding-bottom: 200px;
+  padding: 100px 0px 200px;
+  margin: auto;
 }
 
 #contact li {
   text-align: center;
   font-size: var(--fontsize-small);
   line-height: 2;
+  list-style-type: none;
 }
 
 #contact a {
   text-decoration: none;
+}
+
+#contact ul {
+  display: flex;
+  justify-content: space-between;
+  width: 500px;
+  margin: auto;
+}
+
+#contact li {
+  display: flex;
+  flex-direction: column;
+}
+
+#contact img {
+  width: 50px;
+  height: 50px;
+  margin: auto;
+}
+
+#contact .address_title {
+  font-size: var(--fontsize-small);
+  color: orange;
+}
+
+#contact .address {
+  text-decoration: none;
+  font-size: var(--fontsize-mini);
+  color: var(--dimgray);
 }
 
 @media screen and (max-width: 768px) {
@@ -288,6 +294,14 @@ header {
     display: flex;
   }
 
+  .aboutMe1,
+  .aboutMe3 {
+    display: none;
+  }
+
+  .aboutMe2 {
+    width: 100%;
+  }
   #skills .languages {
     flex-direction: column;
     align-items: center;
@@ -296,5 +310,9 @@ header {
 
   #skills .humanLang {
     margin-top: 24px;
+  }
+
+  #contact .contactAddress {
+    width: 400px;
   }
 }
