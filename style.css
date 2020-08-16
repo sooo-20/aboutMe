@@ -5,10 +5,10 @@
   --lavender: #e6e6fa;
 
   /*font size*/
-  --fontsize-large: 24px;
-  --fontsize-medium: 18px;
-  --fontsize-small: 14px;
-  --fontsize-mini: 12px;
+  --fontsize-large: 28px;
+  --fontsize-medium: 24px;
+  --fontsize-small: 20px;
+  --fontsize-mini: 16px;
 }
 
 * {
@@ -18,17 +18,8 @@
 }
 
 body {
-  background-color: var(--lavenderblush);
   font-family: "Nanum Gothic", sans-serif;
-}
-
-a {
-  text-decoration: none;
-  font-weight: bold;
-}
-a:hover,
-a:active {
-  color: black;
+  background-color: white;
 }
 
 .title {
@@ -44,9 +35,24 @@ header {
   top: 0;
 }
 
+#main a {
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+  padding: 20px 12px;
+}
+
+#main a:hover,
+#main a:active {
+  color: black;
+}
+
+#main .page_title a:hover {
+  color: white;
+}
+
 .navbar {
-  background-color: white;
-  color: mediumpurple;
+  background-color: mediumpurple;
   text-transform: uppercase;
   display: flex;
   justify-content: space-between;
@@ -54,6 +60,7 @@ header {
 }
 
 .navbar .page_title {
+  color: white;
   font-size: var(--fontsize-large);
   font-weight: bold;
   margin-left: 12px;
@@ -70,68 +77,112 @@ header {
 
 .navbar .navbar_menu li:hover,
 .navbar .navbar_menu li:active {
-  background-color: var(--lavenderblush);
+  color: black;
+  background-color: white;
 }
 
 .navbar .navbar_toggleBtn {
   display: none;
   position: absolute;
-  right: 32px;
-  top: 16px;
+  right: 18px;
   font-size: 18px;
 }
 
 .aboutMe {
+  padding: 40px 100px;
   text-align: center;
-  padding-top: 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.mySlides {
+  display: none;
 }
 
 .aboutMe img {
   display: block;
-  width: 200px;
-  height: 200px;
+  width: 300px;
+  height: 300px;
   border-radius: 50%;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 10px;
+}
+
+.dot {
+  height: 8px;
+  width: 8px;
+  margin: 4px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.current {
+  background-color: var(--dimgray);
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .aboutMe .info {
-  padding: 20px;
-  line-height: 1.6;
-}
-
-.aboutMe .info .name {
-  font-size: var(--fontsize-large);
-  font-weight: bold;
-}
-
-.aboutMe .info .summary {
-  font-size: var(--fontsize-small);
-  color: var(--dimgray);
+  line-height: 1.8;
 }
 
 .aboutMe .more {
-  font-size: var(--fontsize-mini);
-  padding: 10px;
+  position: fixed;
+  top: 90px;
+  right: 30px;
+  text-decoration: none;
+  color: var(--dimgray);
+  font-size: var(--fontsize-small);
 }
 
-.aboutMe .more button {
-  padding: 10px;
-  margin: 4px;
-  background-color: transparent;
-  cursor: pointer;
-  border: 1px dashed var(--dimgray);
-  font-size: var(--fontsize-mini);
+.aboutMe .more img {
+  width: 50px;
+  height: 50px;
+}
+
+.aboutMe .more:hover {
+  font-weight: bold;
+}
+
+.aboutMe .more img:hover {
+  width: 55px;
+  height: 55px;
 }
 
 #skills {
-  padding-top: 100px;
+  padding: 100px 0px;
 }
 
 #skills li {
   list-style-type: none;
   line-height: 1.8;
-  font-size: var(--fontsize-small);
+  font-size: var(--fontsize-mini);
 }
 
 #skills img {
@@ -143,9 +194,10 @@ header {
   margin-top: 0px;
   display: flex;
   justify-content: space-between;
-  width: 600px;
+  width: 700px;
   margin: auto;
   color: var(--dimgray);
+  font-size: var(--fontsize-small);
 }
 
 #skills progress {
@@ -153,12 +205,121 @@ header {
   width: 250px;
 }
 
-#experiences {
-  padding-top: 100px;
+#progressBar {
+  width: 300px;
+  height: 20px;
+  border: 2px solid mediumpurple;
+  background-color: #fff;
+  margin-bottom: 8px;
 }
 
-#contacts {
-  padding-top: 100px;
+#progressBarFull10 {
+  height: 18px;
+  background-color: mediumpurple;
+  width: 100%;
+}
+
+#progressBarFull8 {
+  height: 18px;
+  background-color: mediumpurple;
+  width: 80%;
+}
+
+#progressBarFull7 {
+  height: 18px;
+  background-color: mediumpurple;
+  width: 70%;
+}
+
+#progressBarFull5 {
+  height: 18px;
+  background-color: mediumpurple;
+  width: 50%;
+}
+
+#progressBarFull4 {
+  height: 18px;
+  background-color: mediumpurple;
+  width: 40%;
+}
+
+#contact {
+  padding: 100px 0px 200px;
+  margin: auto;
+}
+
+#contact li {
+  text-align: center;
+  font-size: var(--fontsize-small);
+  line-height: 2;
+  list-style-type: none;
+}
+
+#contact a {
+  text-decoration: none;
+}
+
+#contact ul {
+  display: flex;
+  justify-content: space-between;
+  width: 500px;
+  margin: auto;
+}
+
+#contact li {
+  display: flex;
+  flex-direction: column;
+}
+
+#contact img {
+  width: 50px;
+  height: 50px;
+  margin: auto;
+}
+
+#contact .address_title {
+  font-size: var(--fontsize-small);
+  color: orange;
+}
+
+#contact .address {
+  text-decoration: none;
+  font-size: var(--fontsize-mini);
+  color: var(--dimgray);
+}
+
+.moreAboutMe {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 0px;
+  width: 850px;
+  margin: auto;
+}
+
+table img {
+  width: 50px;
+  height: 50px;
+}
+
+table,
+th,
+td {
+  border: 2px solid lavender;
+  width: 250px;
+  text-align: center;
+  border-collapse: collapse;
+  padding: 6px;
+  line-height: 1.3;
+}
+
+th {
+  font-size: var(--fontsize-small);
+  background-color: lavender;
+}
+
+td {
+  font-size: var(--fontsize-mini);
+  color: var(--dimgray);
 }
 
 @media screen and (max-width: 768px) {
@@ -191,6 +352,10 @@ header {
     display: flex;
   }
 
+  .aboutMe .aboutMeText {
+    display: none;
+  }
+
   #skills .languages {
     flex-direction: column;
     align-items: center;
@@ -199,5 +364,19 @@ header {
 
   #skills .humanLang {
     margin-top: 24px;
+  }
+
+  #contact .contactAddress {
+    width: 400px;
+  }
+
+  .moreAboutMe {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+
+  .moreAboutMe table {
+    margin-top: 20px;
   }
 }
